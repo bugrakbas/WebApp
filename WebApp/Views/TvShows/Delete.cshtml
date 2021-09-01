@@ -1,0 +1,58 @@
+﻿@model WebApp.Models.TvShow
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Sil</h1>
+
+<h3>Silmek istediğinizden emin misiniz ?</h3>
+<div>
+    <h4>TvShow</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Genre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Genre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rating)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ImdbUrl)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ImdbUrl)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ImageUrl)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ImageUrl)
+        </dd>
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.WatchMovieUrl)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.WatchMovieUrl)
+        </dd>
+    </dl>
+    
+    <form asp-action="Sil">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Listeye Geri Dön</a>
+    </form>
+</div>
